@@ -158,10 +158,17 @@ if difficulty == "easy":
             engine.runAndWait()
             break
 
-        print("Computer is thinking...")
-        time.sleep(1)
+        if squares[0] != "_" and squares[1] != "_" and squares[2] != "_" and squares[3] != "_" and squares[4] != "_" and squares[5] != "_" and squares[6] != "_" and squares[7] != "_" and squares[8] != "_":
+            print("Cat!")
+            engine.say("Cat!")
+            engine.runAndWait()
+            break
         
         #computer chooses
+        print("Computer is thinking...")
+        engine.say("Computer is thinking.")
+        engine.runAndWait()
+        
         choose()
         while squares[computerChoice] == "X" or squares[computerChoice] == "O":
             choose()
@@ -339,39 +346,45 @@ elif difficulty == "hard":
             engine.say("Good job! You win!")
             engine.runAndWait()
             break
-        if squares[3] == squares[4] and squares[4] == squares[5] and squares[3] != "_":
+        elif squares[3] == squares[4] and squares[4] == squares[5] and squares[3] != "_":
             print("Good job! You win!")
             engine.say("Good job! You win!")
             engine.runAndWait()
             break
-        if squares[6] == squares[7] and squares[7] == squares[8] and squares[6] != "_":
+        elif squares[6] == squares[7] and squares[7] == squares[8] and squares[6] != "_":
             print("Good job! You win!")
             engine.say("Good job! You win!")
             engine.runAndWait()
             break
-        if squares[0] == squares[3] and squares[3] == squares[6] and squares[0] != "_":
+        elif squares[0] == squares[3] and squares[3] == squares[6] and squares[0] != "_":
             print("Good job! You win!")
             engine.say("Good job! You win!")
             engine.runAndWait()
             break
-        if squares[1] == squares[4] and squares[4] == squares[7] and squares[1] != "_":
+        elif squares[1] == squares[4] and squares[4] == squares[7] and squares[1] != "_":
             print("Good job! You win!")
             engine.say("Good job! You win!")
             engine.runAndWait()
             break
-        if squares[2] == squares[5] and squares[5] == squares[8] and squares[2] != "_":
+        elif squares[2] == squares[5] and squares[5] == squares[8] and squares[2] != "_":
             print("Good job! You win!")
             engine.say("Good job! You win!")
             engine.runAndWait()
             break
-        if squares[0] == squares[4] and squares[4] == squares[8] and squares[0] != "_":
+        elif squares[0] == squares[4] and squares[4] == squares[8] and squares[0] != "_":
             print("Good job! You win!")
             engine.say("Good job! You win!")
             engine.runAndWait()
             break
-        if squares[2] == squares[4] and squares[4] == squares[6] and squares[2] != "_":
+        elif squares[2] == squares[4] and squares[4] == squares[6] and squares[2] != "_":
             print("Good job! You win!")
             engine.say("Good job! You win!")
+            engine.runAndWait()
+            break
+        
+        if squares[0] != "_" and squares[1] != "_" and squares[2] != "_" and squares[3] != "_" and squares[4] != "_" and squares[5] != "_" and squares[6] != "_" and squares[7] != "_" and squares[8] != "_":
+            print("Cat!")
+            engine.say("Cat!")
             engine.runAndWait()
             break
 
