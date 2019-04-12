@@ -2,6 +2,8 @@ from random import *
 import time
 import pyttsx3
 engine = pyttsx3.init()
+#comment the next line to let it talk
+engine.setProperty("volume",0)
 
 a1Occupied = False
 a2Occupied = False
@@ -393,8 +395,82 @@ elif difficulty == "hard":
         engine.say("Computer is thinking.")
         engine.runAndWait()
         
-        #if computer can win or block (ik this is a mess)
-        if squares[0] == squares[1] and squares[2] == "_" and squares[0] != "_":
+        #if computer can win (ik this is a mess)
+        if squares[0] == squares[1] and squares[2] == "_" and squares[0] != "_" and squares[0] == "O":
+            squares[2] = "O"
+
+        elif squares[1] == squares[2] and squares[0] == "_" and squares[1] != "_" and squares[1] == "O":
+            squares[0] = "O"
+
+        elif squares[0] == squares[2] and squares[1] == "_" and squares[0] != "_" and squares[0] == "O":
+            squares[1] = "O"
+
+        elif squares[3] == squares[4] and squares[5] == "_" and squares[3] != "_" and squares[3] == "O":
+            squares[5] = "O"
+
+        elif squares[4] == squares[5] and squares[3] == "_" and squares[4] != "_" and squares[4] == "O":
+            squares[3] = "O"
+
+        elif squares[3] == squares[5] and squares[4] == "_" and squares[3] != "_" and squares[3] == "O":
+            squares[4] = "O"
+
+        elif squares[6] == squares[7] and squares[8] == "_" and squares[6] != "_" and squares[6] == "O":
+            squares[8] = "O"
+
+        elif squares[7] == squares[8] and squares[6] == "_" and squares[7] != "_" and squares[7] == "O":
+            squares[6] = "O"
+
+        elif squares[6] == squares[8] and squares[7] == "_" and squares[6] != "_" and squares[6] == "O":
+            squares[7] = "O"
+
+        elif squares[0] == squares[3] and squares[6] == "_" and squares[0] != "_" and squares[0] == "O":
+            squares[6] = "O"
+
+        elif squares[3] == squares[6] and squares[0] == "_" and squares[3] != "_" and squares[3] == "O":
+            squares[0] = "O"
+
+        elif squares[0] == squares[6] and squares[3] == "_" and squares[0] != "_" and squares[0] == "O":
+            squares[3] = "O"
+
+        elif squares[1] == squares[4] and squares[7] == "_" and squares[1] != "_" and squares[1] == "O":
+            squares[7] = "O"
+
+        elif squares[4] == squares[7] and squares[1] == "_" and squares[4] != "_" and squares[4] == "O":
+            squares[1] = "O"
+
+        elif squares[1] == squares[7] and squares[4] == "_" and squares[1] != "_" and squares[1] == "O":
+            squares[4] = "O"
+
+        elif squares[2] == squares[5] and squares[8] == "_" and squares[2] != "_" and squares[2] == "O":
+            squares[8] = "O"
+
+        elif squares[5] == squares[8] and squares[2] == "_" and squares[5] != "_" and squares[5] == "O":
+            squares[2] = "O"
+
+        elif squares[2] == squares[8] and squares[5] == "_" and squares[2] != "_" and squares[2] == "O":
+            squares[5] = "O"
+
+        elif squares[0] == squares[4] and squares[8] == "_" and squares[0] != "_" and squares[0] == "O":
+            squares[8] = "O"
+
+        elif squares[4] == squares[8] and squares[0] == "_" and squares[4] != "_" and squares[4] == "O":
+            squares[0] = "O"
+
+        elif squares[0] == squares[8] and squares[4] == "_" and squares[0] != "_" and squares[0] == "O":
+            squares[4] = "O"
+
+        elif squares[2] == squares[4] and squares[6] == "_" and squares[2] != "_" and squares[2] == "O":
+            squares[6] = "O"
+
+        elif squares[4] == squares[6] and squares[2] == "_" and squares[4] != "_" and squares[4] == "O":
+            squares[2] = "O"
+
+        elif squares[2] == squares[6] and squares[4] == "_" and squares[2] != "_" and squares[2] == "O":
+            squares[4] = "O"
+
+        #if computer can block
+
+        elif squares[0] == squares[1] and squares[2] == "_" and squares[0] != "_":
             squares[2] = "O"
 
         elif squares[1] == squares[2] and squares[0] == "_" and squares[1] != "_":
