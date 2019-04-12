@@ -2,8 +2,8 @@ from random import *
 import time
 import pyttsx3
 engine = pyttsx3.init()
-#comment the next line to let it talk
-engine.setProperty("volume",0)
+#uncomment the next line to mute it
+#engine.setProperty("volume",0)
 
 a1Occupied = False
 a2Occupied = False
